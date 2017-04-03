@@ -9,16 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+  
+  @IBOutlet weak var textDisplay: UILabel!
+  
+  @IBAction func helloWorld(_ sender: Any) {
+    print("Pressed Hello World Button")
+    textDisplay.text = "Hello World!"
+  }
+  
+  @IBAction func goodbyeWorld(_ sender: Any) {
+    print("Pressed Goodbye World Button")
+    textDisplay.text = "Goodbye, World!"
+  }
+  
+  @IBAction func unicorn(_ sender: Any) {
+    print("Pressed Unicorn! Button")
+    textDisplay.text = "Unicorn!"
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-   
-
+    textDisplay.text = "Zzz..."
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  
+  
+  
 }
